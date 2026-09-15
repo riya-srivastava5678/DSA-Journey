@@ -1,0 +1,18 @@
+def reverseString(s):
+    n=len(s)-1
+    i,j=0,n
+    while i<j:
+        s[i],s[j]=s[j],s[i]
+        i+=1
+        j-=1
+    return s
+def ReverseString2(s):
+    n=len(s)
+    
+    for i in range(n//2):
+        s[i],s[n-i-1]=s[n-i-1],s[i]
+    return s
+        
+s=list(map(int,input().split()))
+print(reverseString(s))
+print(ReverseString2(s))
